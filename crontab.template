@@ -1,0 +1,6 @@
+# Run cert renewal script every month (or so)
+# Example - 10th of the month, every month, at 5:30am
+30 5 10 1-12 * python3 PATH_TO_UPDATE_DNS_SCRIPT
+
+# Clear root mail everyday
+0 0 * * *  cat /dev/null > /var/spool/mail/root 2>&1 > mailroot.log
